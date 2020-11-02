@@ -68,6 +68,19 @@ For this contract, we performed the following:
 * Annual distribution is set to 250. This equates to a 4 year vesting period for the total_shares, as 250 will be distributed per year. 
 * The `uint start_time = now;` line permanently stores the contract's start date. We use this to calculate the vested shares later. Below this variable, the `unlock_time` is set equal to `now` plus `365 days`. We increment each distribution period.
 * The `uint public distributed_shares` will track how many vested shares the employee has claimed and was distributed. By default, this is 0.
+* There is a distribute function that contains 2 `require` statements:
+  - `unlock_time` is less than or equal to `now`.
+  - `distributed_shares` is less than the `total_shares` the employee was set for.
+* After the `require` statements, `365 days` is added to the `unlock_time`. This calculates next year's unlock time before distributing this year's shares. We want to perform all of our calculations like this before distributing the shares.
+* The `distributed_shares` is equal to `(now - start_time)` divided by `365 days`, multiplied by the annual distribution. If `now - start_time` is less than `365 days`, the output will be `0` since the remainder will be discarded. If it is something like `400` days, the output will equal `1`, meaning `distributed_shares` would equal `250`.
+* The final `if` statement checks that in case the employee does not cash out until 5+ years after the contract start, the contract does not reward more than the total_shares agreed upon in the contract.
+
+
+
+
+
+
+
 
 
 
