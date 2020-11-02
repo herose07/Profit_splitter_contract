@@ -40,6 +40,8 @@ The contract is compiled and then deployed by connecting to Injected Web3. Durin
  
 **Calling Balance Function:**
 
+Notice it returns a value of 0 which indicates are deposit function is handling the remainders successfully.
+
 ![image](https://user-images.githubusercontent.com/65314799/97829133-abe86500-1c8e-11eb-948b-3855792f19de.png)
 
 
