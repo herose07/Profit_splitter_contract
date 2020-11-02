@@ -58,6 +58,12 @@ The deposit function has these differences:
 * After calculating the amount for the first employee, the amount is added to the total to keep a running total of how much of the `msg.value` has distributed.
 * After transfering the amount, the remainder is sent to the employee with the highest percentage by subtracting `total` from `msg.value`.
 
+## Deferred Equity Plan Contract
+In this contract, we managed an employee's "deferred equity incentive plan" in which 1000 shares will be distributed over 4 years to the employee. 
+We didn't work with Ether in this contract, but we store and set the amounts that represent the number of distributed shares the employee owns and enforcing the vetting periods automatically.
+
+
+
 
 
 
