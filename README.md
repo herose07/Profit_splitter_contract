@@ -44,6 +44,25 @@ Notice it returns a value of 0 which indicates are deposit function is handling 
 
 ![image](https://user-images.githubusercontent.com/65314799/97829133-abe86500-1c8e-11eb-948b-3855792f19de.png)
 
+## Tiered Profit Splitter Contract
+
+In this contract, rather than splitting the profits between Associate-level employees, you will calculate rudimentary percentages for different tiers of employees (CEO, CTO, and Bob).
+
+The deposit function has these differences:
+
+* Calculation of the number of points/units is done by dividing `msg.value` by 100. This allows us to multiply the points with a number representing a percentage.
+* The `uint amount` variable is used to store the amount to send each employee temporarily. For each employee, the amount is set equal to the number of points multiplied by the percentage 
+  - For employee_one, distribute points * 60.
+  - For employee_two, distribute points * 25.
+  - For employee_three, distribute points * 15.
+* After calculating the amount for the first employee, the amount is added to the total to keep a running total of how much of the `msg.value` has distributed.
+* After transfering the amount, the remainder is sent to the employee with the highest percentage by subtracting `total` from `msg.value`.
+
+
+
+
+
+
 
 
 
