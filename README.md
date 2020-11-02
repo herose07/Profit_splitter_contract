@@ -26,19 +26,19 @@ The contract is compiled and then deployed by connecting to Injected Web3. Durin
 
 ![image](https://user-images.githubusercontent.com/65314799/97828696-78f1a180-1c8d-11eb-902e-4058e3ec9f4c.png)
 
-**Deposit of 40 Ether is executed through MetaMask**
+**Deposit of 40 Ether is executed through MetaMask:**
 
 ![image](https://user-images.githubusercontent.com/65314799/97828832-d8e84800-1c8d-11eb-95db-8f119f7fedb5.png)
 
-**Original Balances shown in Ganache**
+**Original Balances shown in Ganache:**
 
 ![image](https://user-images.githubusercontent.com/65314799/97828931-1b118980-1c8e-11eb-966e-4e9f202dd3b2.png)
 
-**Balances After Deposit shown in Ganache**
+**Balances After Deposit shown in Ganache:**
 
 ![image](https://user-images.githubusercontent.com/65314799/97829058-6a57ba00-1c8e-11eb-8dcc-ea7a895c8bbd.png)
  
-**Calling Balance Function**
+**Calling Balance Function:**
 
 ![image](https://user-images.githubusercontent.com/65314799/97829133-abe86500-1c8e-11eb-948b-3855792f19de.png)
 
