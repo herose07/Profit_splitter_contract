@@ -60,7 +60,14 @@ The deposit function has these differences:
 
 ## Deferred Equity Plan Contract
 In this contract, we managed an employee's "deferred equity incentive plan" in which 1000 shares will be distributed over 4 years to the employee. 
-We didn't work with Ether in this contract, but we store and set the amounts that represent the number of distributed shares the employee owns and enforcing the vetting periods automatically.
+We didn't work with Ether in this contract, but we store and set the amounts that represent the number of distributed shares the employee owns and enforce the vetting periods automatically.
+
+For this contract, we performed the following:
+* Human Resources was set in the constructor as the 'msg.sender', since HR will be deploying the contract.
+* Total shares is set to 1000
+* Annual distribution is set to 250. This equates to a 4 year vesting period for the total_shares, as 250 will be distributed per year. 
+* The `uint start_time = now;` line permanently stores the contract's start date. We use this to calculate the vested shares later. Below this variable, the `unlock_time` is set equal to `now` plus `365 days`. We increment each distribution period.
+* The `uint public distributed_shares` will track how many vested shares the employee has claimed and was distributed. By default, this is 0.
 
 
 
