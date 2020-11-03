@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/65314799/98048902-3f877600-1df4-11eb-9dd9-d6caf94a7259.png)
+
+
 # Profit_splitter_contract
 
 This project involves building smart contracts to automate some company finances to make everyone's lives easier, increase transparency, and to make accounting and auditing practically automatic!
